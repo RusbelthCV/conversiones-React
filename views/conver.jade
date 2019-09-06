@@ -1,0 +1,24 @@
+html
+    head
+        title Convertir valores
+        link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous")
+    body
+        div(class = "container mt-2")
+            div(class = "row")
+                form(action = "/respuesta" method = "POST")
+                    div(class = "form-group")
+                        label(for = "valor") Valor
+                        input(class = "form-control" type = "text" id = "valor" name = "valor")
+                        div(class = "row")
+
+                            select(class = "custom-select col-4 m-2" name = "valor1")
+                                option(disabled selected) Elije valor
+                                option(value = "millas") millas
+                                option(value = "metros") metros
+                                option(value = "km") km
+                            select(class = "custom-select col-4 mt-2" name = "valor2")
+                                option(disabled selected) Elije valor
+                                option(value = "millas") millas
+                                option(value = "metros") metros
+                                option(value = "km") km
+                    button(class = "btn btn-primary" type = "submit") Enviar
